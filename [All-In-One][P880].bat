@@ -322,7 +322,9 @@ if %z%==x (goto x)
 
 :CCK_v4.2
 cls
-adb push stuffForAndroid /data/media/tmp
+adb push stuffForAndroid/kernel /data/media/tmp/kernel
+adb push stuffForAndroid/zImages/CCKv42 /data/media/tmp/zImages/CCKv42
+adb push stuffForAndroid/modules/CCKv42 /data/media/tmp/modules/CCKv42
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -336,9 +338,10 @@ echo.
 echo.
 echo.
 pause
+adb wait-for-device
+adb shell "su -c echo "#!/system/bin/sh" > /data/media/tmp/setVar.sh"
+adb shell "su -c echo "kernelversion=CCKv42" >> /data/media/tmp/setVar.sh"
 adb shell "su -c chmod -R 777 /data/media/tmp/*"
-adb shell "su -c echo chsnzImg=CCKv42 >> /data/media/tmp/setVar.sh"
-adb shell "su -c cd /data/media/tmp"
 adb shell "su -c sh /data/media/tmp/setVar.sh"
 adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
@@ -349,7 +352,9 @@ goto DONE_KERNEL
 
 :IODAK_v8
 cls
-adb push stuffForAndroid /data/media/tmp
+adb push stuffForAndroid/kernel /data/media/tmp/kernel
+adb push stuffForAndroid/zImages/IODAKv8 /data/media/tmp/zImages/IODAKv8
+adb push stuffForAndroid/modules/IODAKv8 /data/media/tmp/modules/IODAKv8
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -363,9 +368,10 @@ echo.
 echo.
 echo.
 pause
+adb wait-for-device
+adb shell "su -c echo "#!/system/bin/sh" > /data/media/tmp/setVar.sh"
+adb shell "su -c echo "kernelversion=IODAKv8" >> /data/media/tmp/setVar.sh"
 adb shell "su -c chmod -R 777 /data/media/tmp/*"
-adb shell "su -c echo chsnzImg=IODAKv8 >> /data/media/tmp/setVar.sh"
-adb shell "su -c cd /data/media/tmp"
 adb shell "su -c sh /data/media/tmp/setVar.sh"
 adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
@@ -377,7 +383,9 @@ goto DONE_KERNEL
 
 :IODAK_v9
 cls
-adb push stuffForAndroid /data/media/tmp
+adb push stuffForAndroid/kernel /data/media/tmp/kernel
+adb push stuffForAndroid/zImages/IODAKv9 /data/media/tmp/zImages/IODAKv9
+adb push stuffForAndroid/modules/IODAKv9 /data/media/tmp/modules/IODAKv9
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -391,9 +399,10 @@ echo.
 echo.
 echo.
 pause
+adb wait-for-device
+adb shell "su -c echo "#!/system/bin/sh" > /data/media/tmp/setVar.sh"
+adb shell "su -c echo "kernelversion=IODAKv9" >> /data/media/tmp/setVar.sh"
 adb shell "su -c chmod -R 777 /data/media/tmp/*"
-adb shell "su -c echo chsnzImg=IODAKv9 >> /data/media/tmp/setVar.sh"
-adb shell "su -c cd /data/media/tmp"
 adb shell "su -c sh /data/media/tmp/setVar.sh"
 adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
@@ -406,7 +415,9 @@ goto DONE_KERNEL
 
 :IODAK_v9.5
 cls
-adb push stuffForAndroid /data/media/tmp
+adb push stuffForAndroid/kernel /data/media/tmp/kernel
+adb push stuffForAndroid/zImages/IODAKv95 /data/media/tmp/zImages/IODAKv95
+adb push stuffForAndroid/modules/IODAKv95 /data/media/tmp/modules/IODAKv95
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -420,9 +431,10 @@ echo.
 echo.
 echo.
 pause
+adb wait-for-device
+adb shell "su -c echo "#!/system/bin/sh" > /data/media/tmp/setVar.sh"
+adb shell "su -c echo "kernelversion=IODAKv95" >> /data/media/tmp/setVar.sh"
 adb shell "su -c chmod -R 777 /data/media/tmp/*"
-adb shell "su -c echo chsnzImg=IODAKv95 >> /data/media/tmp/setVar.sh"
-adb shell "su -c cd /data/media/tmp"
 adb shell "su -c sh /data/media/tmp/setVar.sh"
 adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
@@ -435,7 +447,9 @@ goto DONE_KERNEL
 
 :IODAK_v9.95
 cls
-adb push stuffForAndroid /data/media/tmp
+adb push stuffForAndroid/kernel /data/media/tmp/kernel
+adb push stuffForAndroid/zImages/IODAKv995 /data/media/tmp/zImages/IODAKv995
+adb push stuffForAndroid/modules/IODAKv995 /data/media/tmp/modules/IODAKv995
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -449,9 +463,10 @@ echo.
 echo.
 echo.
 pause
+adb wait-for-device
+adb shell "su -c echo "#!/system/bin/sh" > /data/media/tmp/setVar.sh"
+adb shell "su -c echo "kernelversion=IODAKv995" >> /data/media/tmp/setVar.sh"
 adb shell "su -c chmod -R 777 /data/media/tmp/*"
-adb shell "su -c echo chsnzImg=IODAKv995 >> /data/media/tmp/setVar.sh"
-adb shell "su -c cd /data/media/tmp"
 adb shell "su -c sh /data/media/tmp/setVar.sh"
 adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
@@ -463,7 +478,9 @@ goto DONE_KERNEL
 
 :PRIME_v2.7
 cls
-adb push stuffForAndroid /data/media/tmp
+adb push stuffForAndroid/kernel /data/media/tmp/kernel
+adb push stuffForAndroid/zImages/PRIMEv27 /data/media/tmp/zImages/PRIMEv27
+adb push stuffForAndroid/modules/PRIMEv27 /data/media/tmp/modules/PRIMEv27
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -477,9 +494,10 @@ echo.
 echo.
 echo.
 pause
+adb wait-for-device
+adb shell "su -c echo "#!/system/bin/sh" > /data/media/tmp/setVar.sh"
+adb shell "su -c echo "kernelversion=PRIMEv27" >> /data/media/tmp/setVar.sh"
 adb shell "su -c chmod -R 777 /data/media/tmp/*"
-adb shell "su -c echo chsnzImg=PRIMEv27 >> /data/media/tmp/setVar.sh"
-adb shell "su -c cd /data/media/tmp"
 adb shell "su -c sh /data/media/tmp/setVar.sh"
 adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
@@ -490,7 +508,9 @@ goto DONE_KERNEL
 
 :PLAY_v2.53
 cls
-adb push stuffForAndroid /data/media/tmp
+adb push stuffForAndroid/kernel /data/media/tmp/kernel
+adb push stuffForAndroid/zImages/PLAYv253 /data/media/tmp/zImages/PLAYv253
+adb push stuffForAndroid/modules/PLAYv253 /data/media/tmp/modules/PLAYv253
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -504,9 +524,10 @@ echo.
 echo.
 echo.
 pause
+adb wait-for-device
+adb shell "su -c echo "#!/system/bin/sh" > /data/media/tmp/setVar.sh"
+adb shell "su -c echo "kernelversion=PLAYv253" >> /data/media/tmp/setVar.sh"
 adb shell "su -c chmod -R 777 /data/media/tmp/*"
-adb shell "su -c echo chsnzImg=PLAYv253 >> /data/media/tmp/setVar.sh"
-adb shell "su -c cd /data/media/tmp"
 adb shell "su -c sh /data/media/tmp/setVar.sh"
 adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
@@ -517,7 +538,9 @@ goto DONE_KERNEL
 
 :WEREWOLF_v008b
 cls
-adb push stuffForAndroid /data/media/tmp
+adb push stuffForAndroid/kernel /data/media/tmp/kernel
+adb push stuffForAndroid/zImages/WEREWOLFv008b /data/media/tmp/zImages/WEREWOLFv008b
+adb push stuffForAndroid/modules/WEREWOLFv008b /data/media/tmp/modules/WEREWOLFv008b
 echo _______________________________________________________________________________
 echo [        --------------------------------------------------------             ]
 echo [        '                                                      '             ]
@@ -531,9 +554,10 @@ echo.
 echo.
 echo.
 pause
+adb wait-for-device
+adb shell "su -c echo "#!/system/bin/sh" > /data/media/tmp/setVar.sh"
+adb shell "su -c echo "kernelversion=WEREWOLFv008b" >> /data/media/tmp/setVar.sh"
 adb shell "su -c chmod -R 777 /data/media/tmp/*"
-adb shell "su -c echo chsnzImg=WEREWOLFv008b >> /data/media/tmp/setVar.sh"
-adb shell "su -c cd /data/media/tmp"
 adb shell "su -c sh /data/media/tmp/setVar.sh"
 adb shell "su -c sh /data/media/tmp/kernel/kernel.sh"
 echo.
